@@ -9,5 +9,5 @@ else
 fi
 pip uninstall shadowsocks
 rm /etc/shadowsocks.json
-systemctl disable /etc/systemd/system/shadowsocks.service
+systemctl disable shadowsocks
 rm /etc/systemd/system/shadowsocks.service
