@@ -1,7 +1,7 @@
 #!/bin/bash
 # need root 
 # wget https://raw.githubusercontent.com/fdbug/ss_for_qcloud_ubuntu/master/setup.sh
-if ［ `whoami` = "root" ］
+if [ `whoami` = "root" ]
 then
     echo "start!"
 else
