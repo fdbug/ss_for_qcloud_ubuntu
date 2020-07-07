@@ -19,6 +19,8 @@ cp ./shadowsocks.service /etc/systemd/system/shadowsocks.service
 # fix openssl bug
 sed -i 's/EVP_CIPHER_CTX_cleanup/EVP_CIPHER_CTX_reset/g' /usr/local/lib/python2.7/dist-packages/shadowsocks/crypto/openssl.py
 systemctl enable /etc/systemd/system/shadowsocks.service
+# wait for 3 seconds
+sleep 3
 service shadowsocks restart
 # check
 if [ `netstat  -nap | grep 3389 | grep LISTEN|wc -l`=="1" ] 
