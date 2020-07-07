@@ -1,6 +1,6 @@
 #!/bin/bash
 # sudo su - root
-# wget https://github.com/fdbug/ss_for_qcloud_ubuntu
+# wget https://raw.githubusercontent.com/fdbug/ss_for_qcloud_ubuntu/master/setup.sh
 # chmod x+r setup.sh
 sudo apt install python-pip
 pip install shadowsocks
