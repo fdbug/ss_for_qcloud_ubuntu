@@ -9,6 +9,7 @@ else
     exit 0
 fi
 cd ~
+rm shadowsocks*
 wget https://raw.githubusercontent.com/fdbug/ss_for_qcloud_ubuntu/master/shadowsocks.json
 wget https://raw.githubusercontent.com/fdbug/ss_for_qcloud_ubuntu/master/shadowsocks.service
 # chmod x+r setup.sh
@@ -17,7 +18,9 @@ pip install shadowsocks
 cp ./shadowsocks.json /etc/shadowsocks.json
 cp ./shadowsocks.service /etc/systemd/system/shadowsocks.service
 # fix openssl bug
+sleep 1
 sed -i 's/EVP_CIPHER_CTX_cleanup/EVP_CIPHER_CTX_reset/g' /usr/local/lib/python2.7/dist-packages/shadowsocks/crypto/openssl.py
+sleep 1
 systemctl enable /etc/systemd/system/shadowsocks.service
 # wait for 3 seconds
 sleep 3
