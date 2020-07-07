@@ -1,6 +1,6 @@
 #!/bin/bash
 # need root 
-if ［ `whoami` = "root" ］
+if [ `whoami` = "root" ]
 then
     echo "remove start!"
 else
